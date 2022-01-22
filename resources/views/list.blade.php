@@ -17,7 +17,7 @@
                         <td>{{ $tovar->name }}</td>
                         <td>{{ $tovar->art }}</td>
                         <td>{{ $tovar->size }}</td>
-                        <td>{{ number_format($tovar->price) }} руб.</td>
+                        <td>{{ number_format($tovar->price, 2, '.', ' ') }} руб.</td>
                         <form method="post" action="{{ route('cart_add') }}">
                             <td><input type="number" name="quantity" value="1"></td>
                             <td>

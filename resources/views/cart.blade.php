@@ -21,7 +21,7 @@
                         <td>{{ $tovar->tovar->name }}</td>
                         <td>{{ $tovar->tovar->art }}</td>
                         <td>{{ $tovar->tovar->size }}</td>
-                        <td>{{ number_format($tovar->tovar->price) }} руб.</td>
+                        <td>{{ number_format($tovar->tovar->price, 2, '.', ' ') }} руб.</td>
                         <form method="post" action="{{ route('cart_update') }}">
                             <td>
                                 <input type="number" name="quantity" value="{{ $tovar->quantity }}">
@@ -47,7 +47,7 @@
                     <td>
                     <td>
                     <td>Итого
-                    <td><b>{{ number_format($total) }} руб.</b>
+                    <td><b>{{ number_format($total, 2, '.', ' ') }} руб.</b>
                 </tr>
             @else
                 Товаров пока не добавлено. <a href="{{ route('list') }}">Перейти к списку</a>
