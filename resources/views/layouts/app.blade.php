@@ -38,6 +38,13 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        @if (Route::has('login'))
+                            @auth
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('/cart') }}">Корзина</a>
+                                </li>
+                            @endauth
+                        @endif
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
