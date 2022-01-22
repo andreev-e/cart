@@ -1,4 +1,4 @@
-composer install --ignore-platform-reqs<br>
+composer u<br>
 php artisan migrate<br>
 php artisan db:seed<br>
 npm i<br>
