@@ -1,4 +1,4 @@
-composer u
+composer i
 php artisan migrate
 php artisan db:seed
 npm i
