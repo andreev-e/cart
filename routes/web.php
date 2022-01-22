@@ -13,5 +13,8 @@
 
 Route::get('/', 'ShopController@list')->name('list');
 Route::get('/cart', 'ShopController@cart')->middleware('auth')->name('cart');
+Route::post('/cart/add', 'ShopController@add')->middleware('auth')->name('cart_add');
+Route::post('/cart/delete', 'ShopController@delete')->middleware('auth')->name('cart_delete');
+Route::post('/cart/update', 'ShopController@update')->middleware('auth')->name('cart_update');
 
 Auth::routes();
